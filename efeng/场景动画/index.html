@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>招聘</title>
+		<meta name="description" content="A Collection of Page Transitions with CSS Animations" />
+		<meta name="keywords" content="page transition, css animation, website, effect, css3, jquery" />
+		<meta name="author" content="Codrops" />
+
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations_other.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			var jsVer = 24;
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth/640;
+	
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)){
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if(version>2.3){
+					document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+				// andriod 2.3以上
+				}else{
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<audio id="audio_player" loop="loop" autoplay="autoplay">
+			<source src="">
+		</audio>
+		<section class="u-arrow-up ">
+			<p class="css_sprite01"></p>
+		</section>
+		<section class="u-arrow-left ">
+			<p class="css_sprite01" style="background-position: -175px 0;"></p>
+		</section>
+		<section class="u-audio ">
+			<p id="playicon" class="css_sprite01" style="background-position: -110px 0;" onclick="playClicked(this)"></p>
+		</section>
+		<div class="box" id="bb">
+			<canvas id="cas" width="1280" height="675"></canvas>
+		</div>
+		<div id="pt-main" class="pt-perspective">
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg1.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:-4px;top:532px;height:348px;width:644px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideRight' animation='slideRight 1s 0s both'>
+					<image src='img/bottom1.png' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:-2px;top:0px;height:464px;width:658px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/top1.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg2.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:2px;top:10px;height:730px;width:650px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/top2.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:-6px;top:634px;height:456px;width:648px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideUp' animation='slideUp 1s 0s both'>
+					<image src='img/bottom2.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg3.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:-16px;top:408px;height:368px;width:654px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideUp' animation='slideUp 1s 0s both'>
+					<image src='img/bottom3.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:326px;top:346px;height:932px;width:328px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideLeft' animation='slideLeft 1s 0s both'>
+					<image src='img/right3.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:-2px;top:0px;height:402px;width:640px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/top3.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:384px;top:410px;height:110px;width:112px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 1s 1s both'>
+					<image src='img/pop3.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg4.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:-120px;top:122px;height:302px;width:474px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideRight' animation='slideRight 1s 0s both'>
+					<image src='img/left4.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:-8px;top:270px;height:456px;width:644px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideUp' animation='slideUp 1s 0s both'>
+					<image src='img/bottom4.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:372px;top:128px;height:1098px;width:266px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideLeft' animation='slideLeft 1s 0s both'>
+					<image src='img/right4.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:18px;top:68px;height:132px;width:122px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 1s 1s both'>
+					<image src='img/pop-left4.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:324px;top:96px;height:144px;width:130px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 1s 1s both'>
+					<image src='img/pop-right4.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg5.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:0px;top:490px;height:346px;width:642px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideUp' animation='slideUp 1s 0s both'>
+					<image src='img/bottom5.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:162px;top:18px;height:474px;width:496px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideLeft' animation='slideLeft 1s 0s both'>
+					<image src='img/right5.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:130px;top:100px;height:134px;width:126px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 1s 1s both'>
+					<image src='img/pop5.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg6.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:142px;top:96px;height:128px;width:116px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 1s 1s both'>
+					<image src='img/pop6.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:256px;top:76px;height:536px;width:370px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/top6.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:-4px;top:490px;height:450px;width:648px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideUp' animation='slideUp 1s 0s both'>
+					<image src='img/bottom6.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg7.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:-2px;top:-2px;height:494px;width:646px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/top7.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:0px;top:488px;height:500px;width:640px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideUp' animation='slideUp 1s 0s both'>
+					<image src='img/bottom7.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:430px;top:514px;height:158px;width:148px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 1s 1s both'>
+					<image src='img/pop-bottom7.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:62px;top:6px;height:178px;width:154px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 1s 1s both'>
+					<image src='img/pop-top7.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg8.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:-8px;top:638px;height:364px;width:652px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideUp' animation='slideUp 1s 0s both'>
+					<image src='img/bottom8.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:42px;top:40px;height:634px;width:566px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/top8.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg9.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:12px;top:674px;height:226px;width:620px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideRight' animation='slideRight 1s 0s both'>
+					<image src='img/bottom9.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:44px;top:52px;height:264px;width:562px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/top9.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:138px;top:366px;height:224px;width:442px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideRight' animation='slideRight 1s 0.5s both'>
+					<image src='img/center9.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+			<div class='pt-page' style='background-color:rgb(51, 51, 51);'>
+				<img src='img/bg10.jpg' style='position:absolute;left:0;top:0;width:100%;height:100% ;z-index=-1'></img>
+				<div style='position:absolute; left:22px;top:236px;height:716px;width:590px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='fadeIn' animation='fadeIn 2s 0s both'>
+					<image src='img/bottom10.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:206px;top:138px;height:914px;width:224px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0s both'>
+					<image src='img/left10.png ' style='height:100%;width:100%;'></image>
+				</div>
+				<div style='position:absolute; left:310px;top:156px;height:920px;width:266px;background-color:rgba(0, 0, 0, 0);opacity:1;z-index:2;' animation-name='slideDown' animation='slideDown 1s 0.5s both'>
+					<image src='img/right10.png ' style='height:100%;width:100%;'></image>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var pageTransition_left = 0;
+			var pageTransition_right = 0;
+			var pageTransition_top = 3;
+			var pageTransition_bottom = 4;
+			var wipescreen ="no";
+			var gotoPage;
+			var isPlay=true;
+			var sharenum=0;
+			if(pageTransition_top>0){
+			  $(".u-arrow-up").css("display","block");
+			}
+			if(pageTransition_left>0){
+			  $(".u-arrow-left").css("display","block");
+			}
+			if($("#audio_player source").attr("src").length >0){
+				$(".u-audio").css("display","block");
+			}
+			if((wipescreen!="no")  && (wipescreen.length>1)){
+			   $(".box").css("display","block");
+			}
+			function playClicked(element)
+		    {
+			//get the state of the player
+			  if(audio_player.paused)
+			  {
+			    audio_player.play();
+			    element.style.backgroundPosition="-110px 0";
+				isPlay=true;
+	         //alert("play");
+			  }else{
+			    audio_player.pause();
+				isPlay=false;
+			    //alert("pause");
+			    element.style.backgroundPosition="-50px 0";
+			  }
+			// $(document).ready(function(){audio_player.play();});
+	        }
+			function fillSharenum(num){
+			  var $sharenum = $("[sharenum='yes']");
+			  $sharenum.each(function(){
+				$(this).html(""+num);
+			  });
+		    }
+		 function record(){
+			 var url="http://yunshow.sinaapp.com/bg/pt/record.php"
+			// var $currPage = $pages.eq( current );
+				$(".item_button").html("正在提交。。");
+			 var $inputs=$( '.item_input' );
+			    var record_data="";
+				var content="";
+				record_data+="{\"email\":\"\",";
+				//alert($inputs.length);
+				$inputs.each(function(){
+					//alert("inputs"+$(this).attr("value"));
+					content+=$(this).attr("predata");
+					content+="--"+$(this).val()+"; ";
+				});
+				
+				//alert(content);
+				record_data+="\"content\":\""+content+"\"}";
+				//var json_recorddata = eval("(" + record_data +")");
+			   //alert(json_recorddata.email);
+			   //alert(json_recorddata.content);
+			   	$.post(url,record_data,
+	             function(data){
+	             // alert(data);
+				 $(".item_button").css("color","#00ff00");
+				 $(".item_button").html("提交成功");
+				 isrecord= true;
+	            });
+			}
+	        fillSharenum(sharenum);
+		</script>
+
+		<script src="js/pagetransitions.js"></script>
+
+		
+
+	</body>
+
+</html>

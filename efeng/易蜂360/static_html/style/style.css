@@ -1,0 +1,410 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+body {
+	font: 12px/20px "Microsoft Yahei";
+	color: #333;
+}
+div {
+	margin: auto;
+}
+a {
+	outline: 0;
+	text-decoration: none;
+}
+img {
+	border: none;
+}
+.lefts,
+.lilef li {
+	float: left;
+}
+.rights,
+.liler li {
+	float: right;
+}
+.w1190 {
+	width: 1190px;
+}
+.w595 {
+	width: 590px;
+}
+.divclear,
+.brclear {
+	clear: both;
+}
+.a-style01 a {
+	color: #999999;
+}
+.a-style01 a:active {
+	color: #999999;
+}
+.a-style01 a:hover {
+	color: #feb83f;
+}
+.p-style01 p {
+	float: left;
+	padding-right: 30px;
+	color: #999999;
+}
+.p-style01 .rights p {
+	float: right;
+	padding: 0px 0px 0px 30px;
+}
+.div_bg_style {
+	background: url(../images/ioc4.gif) repeat-x 33px;
+	text-align: center;
+	font-size: 15px;
+}
+.div_bg_style2 {
+	background: #eaeaec;
+	padding-bottom: 30px;
+}
+.textbox {
+	width: 295px;
+	height: 43px;
+	padding: 5px;
+	line-height: 43px;
+	border: solid 1px #e6e6e6;
+}
+label.temp {
+	line-height: 40px;
+	height: 40px;
+	width: 50px;
+	margin: 0px 20px 0px 20px;
+}
+.select_style {
+	margin-top: 20px;
+}
+.filetxt {
+	height: 40px;
+	line-height: 40px;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	position: absolute;
+}
+.inputxt {
+	height: 40px;
+	line-height: 40px;
+}
+.inputxt:hover {
+	border: solid 1px #feb83e;
+	padding: 1px;
+}
+.buttons {
+	height: 46px;
+	line-height: 46px;
+	font-size: 15px;
+	background: #ffb53a;
+	color: #FFF;
+	border: solid 1px #FFF;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+.buttons_1 {
+	background: #f5f5f5;
+	color: #666;
+	border: solid 1px #e6e6e6;
+}
+/* top */
+
+.top {
+	background: #f0f0f0;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	border-bottom: solid 1px #e6e6e6;
+}
+.iconfont {
+	font-family: mui-global-iconfont!important;
+	font-size: 14px;
+	font-style: normal;
+	color: #999999;
+}
+/* mod01 */
+
+.mod01 {
+	padding: 20px 0px 20px 0px;
+}
+.mod01 img {
+	border: 0px;
+}
+.cent {
+	width: 560px;
+}
+.cent .inputs {
+	width: 507px;
+	height: 40px;
+	line-height: 40px;
+	background: #e6e6e6;
+	border: 0px;
+	color: #CCC;
+	padding-left: 5px;
+}
+.cent .buttonsse {
+	background-image: url(../images/button.jpg);
+	width: 48px;
+	height: 40px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+.cent li {
+	height: 13px;
+	line-height: 13px;
+	padding: 0px 10px 0px 10px;
+	margin-top: 10px;
+	border-right: 1px solid #adadad;
+}
+/* dowlink */
+
+.dow {
+	padding-top: 20px;
+	background: #f1f1f1;
+	border-top: solid 1px #e6e6e6;
+}
+
+.dow1{
+	padding-top: 20px;
+	background: #2f4173;
+	border-top: solid 1px #e6e6e6;
+}
+
+.dowlink {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #e6e6e6;
+}
+.dowlink dl {
+	padding-left: 20px;
+	float: left;
+	width: 210px;
+}
+.dowlink dt {
+	font-weight: bold;
+	margin: 10px 0px 10px 0px;
+}
+.dowlink dd a {
+	display: block;
+	width: 200px;
+	overflow: hidden;
+	text-align: left;
+	height: 20px;
+	line-height: 20px;
+	color: #8b8b8b;
+}
+.webinfo {
+	margin-top: 30px;
+}
+.webinfo p,
+.webinfo p a {
+	text-align: center;
+	color: #8b8b8b;
+}
+.webinfo p a:hover {
+	color: #feb83f;
+}
+.webinfo img {
+	border: 0px;
+	margin: 30px 10px 10px 10px;
+}
+/* main_01 */
+
+.main_01 {
+	background: url(../images/bg_1.jpg) no-repeat;
+	max-width: 1440px;
+	min-height: 700px;
+	*height: 700px;
+}
+.main_01,
+.main_02 {
+	background-color: #efeff1;
+}
+.logmain_bg {
+	width: 620px;
+	height: 320px;
+	margin-top: 70px;
+	padding: 40px;
+	background: #FFF;
+}
+/* menus */
+
+.menus {
+	background: #;
+	height: 46px;
+	border: solid 1px #efefef;
+}
+.menus_x .li {
+	width: 140px;
+	line-height: 46px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	border-right: solid 1px #efefef;
+}
+.menus_x .li a {
+	color: #000;
+	display: block;
+}
+.menus_x .li a:hover,
+.menus_x li .loc {
+	color: #feb942;
+	background: #FFF;
+}
+li.menus_y {
+	width: 225px;
+	color: #FFF;
+	position: relative;
+}
+li.menus_y h2 {
+	font-size: 15px;
+	color: #FFF;
+	background: #333;
+	line-height: 46px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+li.menus_y a {
+	color: #FFF;
+}
+li.menus_y ul {
+	position: absolute;
+	width: 100%;
+	background: #46423f;
+	left: 0px;
+	height: 440px;
+	visibility: hidden;
+	filter: alpha(Opacity=90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+}
+li.menus_y ul li {
+	border: none;
+	width: 195px;
+	padding: 15px;
+}
+li.menus_y ul li h3 {
+	line-height: 23px;
+	border-bottom: solid 1px #686868;
+	text-align: left;
+	*font-size: 14px;
+}
+li.menus_y ul li p a {
+	width: 65px;
+	*width: 64px;
+	float: left;
+	margin-top: 5px;
+	color: #C9C9C9;
+}
+li.menus_y ul li p a:hover {
+	color: #fceccd;
+	font-weight: bold;
+}
+li.menus_y ul ul {
+	position: absolute;
+	left: 225px;
+	*left: 100px;
+	top: 0px;
+	width: 300px;
+	visibility: hidden;
+	background: #8e938f;
+	filter: alpha(Opacity=90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;
+}
+li.menus_y ul ul li {
+	width: 260px;
+	padding: 20px;
+}
+li.menus_y ul ul a {
+	color: #ffffff;
+}
+li.menus_y ul ul li h3 {
+	border-bottom: solid 1px #ffffff;
+}
+li.menus_y:hover ul {
+	visibility: visible;
+}
+li.menus_y ul li:hover {
+	background: #383735;
+}
+li.menus_y:hover ul ul {
+	visibility: hidden;
+}
+li.menus_y ul ul li:hover {
+	background: none;
+}
+li.menus_y ul li:hover ul {
+	visibility: visible;
+}
+/* logins */
+
+.logins {
+	width: 300px;
+}
+.logins h2 {
+	font-size: 24px;
+	*font-size: 20px;
+}
+.logins form {
+	margin-top: 30px;
+}
+.logins .textbox {
+	margin-bottom: 20px;
+	color: #cccccc;
+	font-size: 17px;
+}
+.logins a {
+	color: #48a0fc;
+}
+.logins a:hover {
+	color: #fe9c06;
+}
+.loginioc {
+	width: 210px;
+	padding-top: 30px;
+}
+.loginioc a {
+	margin-bottom: 20px;
+	padding-left: 10px;
+	font-size: 13px;
+}
+.loginioc li {
+	border: 1px solid #f0f0f0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	position: relative;
+	z-index: 2;
+	border-radius: 4px;
+	width: 208px;
+	height: 40px;
+	line-height: 40px;
+	behavior: url(iecss3.htc);
+	margin-top: 20px;
+}
+.loginioc img {
+	float: left;
+	margin-left: 60px;
+}
+.separator {
+	width: 20px;
+	margin-left: 350px;
+	height: 320px;
+	line-height: 320px;
+	text-align: center;
+	background: url(../images/ioc4.gif) repeat-y;
+	background-position: center;
+	color: #999;
+}
+.mod02 a {
+	display: block;
+	text-align: center;
+	color: #FFF;
+}

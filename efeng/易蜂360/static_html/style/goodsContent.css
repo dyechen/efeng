@@ -1,0 +1,465 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei";
+}
+
+ul, li{
+	list-style: none;
+}
+
+.search-head-wrap {
+	width: 1190px;
+	height: 40px;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.search-list-wrapper .search-attrs .search-head-wrap .checked-list li {
+	float: left;
+}
+.search-list-wrapper .search-attrs .search-head-wrap .checked-list li a {
+	color: #000000;
+}
+.search-list-wrapper .search-attrs .search-head-wrap .checked-list .bold a {
+	font-weight: bold;
+	list-style: none;
+	color: #000000;
+}
+.search-list-wrapper .search-attrs .search-head-wrap .checked-list {
+	height: 40px;
+	line-height: 40px;
+}
+.search-list-wrapper .search-attrs .search-head-wrap .checked-list .right-hot {
+	background: url(../images/rightHot.png) no-repeat;
+}
+
+.goods-wrap{
+	width: 1250px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.goods-pic{
+	width: 450px;
+	height: 600px;
+	float: left;
+}
+
+.goods-pic .pic-small li{
+	float: left;
+	display: inline-block;
+}
+
+.jqzoom {
+	border: none;
+	padding: 0px;
+	cursor: pointer;
+	margin: 0px;
+	display: block;
+}
+
+.zoomdiv {
+	z-index: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 350px;
+	height: 350px;
+	background: #ffffff;
+	border: 1px solid #CCCCCC;
+	display: none;
+	text-align: center;
+	overflow: hidden;
+}
+
+.jqZoomPup {
+	z-index: 10;
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #aaa;
+	background: #ffffff
+	/*url(../images/zoom.png) 50% center no-repeat*/
+	
+	;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	filter: alpha(Opacity=50);
+}
+
+.spec-preview {
+	width: 450px;
+	height: 500px;
+}
+
+.spec-scroll {
+	clear: both;
+	margin-top: 5px;
+	width: 450px;
+}
+
+.spec-scroll .items {
+	float: left;
+	position: relative;
+	width: 450px;
+	height: 56px;
+	overflow: hidden;
+}
+.spec-scroll .items ul {
+	position: absolute;
+	width: 999999px;
+	height: 56px;
+}
+.spec-scroll .items ul li {
+	float: left;
+	width: 90px;
+	text-align: center;
+}
+.spec-scroll .items ul li img {
+	
+	padding: 2px;
+	width: 50px;
+	height: 50px;
+}
+.spec-scroll .items ul li img:hover {
+	border: 1px solid #CCC;
+	padding: 1px;
+}
+
+.goods-info{
+	width: 540px;
+	height: 600px;
+	float: left;
+}
+
+.goods-info .info-head{
+	padding: 20px 20px;
+	height: 100px;
+	border-bottom: 1px solid #ccc;
+}
+
+.goods-info .info-head .title span{
+	font-size: 20px;
+}
+
+.goods-info .info-head .price{
+	margin-top: 5px;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.goods-info .info-head .price .orange-price{
+	color: orange;
+	float: left;
+}
+
+.goods-info .info-head .price .list-mart-price{
+	margin-left: 10px;
+	color: darkgrey;
+	text-decoration: line-through;
+	float: left;
+}
+
+.goods-info .info-state-box {
+	height: 135px;
+	line-height: 135px;
+	border-bottom: 1px solid #ccc;
+}
+
+.goods-info .info-state-box .item-select .item-list .checked{
+	border: 1px solid orange;
+}
+
+.goods-info .info-state-box .item-select1 ul li{
+	display: block;
+	float: left;
+	height: 100px;
+	width: 60px;
+	margin-top: 18px;
+	margin-left: 20px;
+	line-height: 100px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.goods-info .info-state-box .item-select1 ul li img{
+	display: block;
+	width: 25px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+
+.goods-info .info-state-box .item-select1 ul li p{
+	color: darkgray;
+	height: 10px;
+	line-height: 10px;
+}
+
+.goods-info .info-state-box .item-select2 ul li{
+	display: block;
+	float: left;
+	height: 60px;
+	width: 80px;
+	margin-top: 38px;
+	margin-left: 20px;
+	line-height: 60px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.goods-info .info-state-box .item-select2 ul li p{
+	color: darkgray;
+	height: 28px;
+	line-height: 28px;
+}
+
+.goods-info .info-state-box .item-select ul li:hover{
+	border-color: darkgray;
+}
+
+.goods-info .info-state-box .item-select h4{
+	float: left;
+	color: darkgray;
+}
+
+
+.goods-info .info-state-box .item-select a img{
+	width: 25px;
+	height: 50px;
+	display: block;
+}
+
+.goods-info .info-state-box .item-select a span{
+	display: block;
+	font-size: 3px;
+}
+
+.goods-info .info-msg{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 80px;
+}
+
+.goods-info .info-msg span{
+	font-weight: bold;
+}
+
+.goods-info .info-buy .buy-num{
+	float: left;
+}
+
+.goods-info .info-buy .buy-num .item-num{
+	width: 60px;
+	height: 46px;
+	border: 1px solid #ccc;
+	line-height: 50px;
+	text-align: center;
+	
+}
+
+.goods-info .info-buy .buy-btn{
+	cursor: pointer;
+	float: left;
+	width: 26px;
+	height: 52px;
+}
+
+.goods-info .info-buy .buy-btn span{
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+.goods-info .info-buy a{
+	float: left;
+	margin-left: 10px;
+}
+
+.goods-consultation{
+	width: 225px;
+	height: 600px;
+	float: left;
+}
+
+.goods-consultation .company-express{
+	text-align: center;
+}
+
+.goods-consultation .goods-evaluation dl dt,dd{
+	float: left;
+}
+
+.goods-consultation .goods-evaluation .star-num{
+	display: block;
+	width: 130px;
+	height: 20px;
+	background: url(../img/s4.png) no-repeat;
+	background-position: left center; 
+}
+
+.goods-consultation .goods-evaluation dl .score{
+	float: right;
+}
+
+.goods-consultation .goods-evaluation{
+	color: darkgrey;
+	margin: 15px 0;
+	color: grey;
+}
+
+.goods-consultation .contact-company img{
+	margin: 15px 0;
+}
+
+.goods-consultation .server-bz{
+	margin-top: 10px;
+	height: 100px;
+	border-bottom: 1px dashed gray;
+}
+
+.goods-consultation .server-bz ul li{
+	float: left;
+	margin-right: 9px;
+}
+
+.goods-consultation .server-bz .bz-text{
+	color: lightgrey;
+}
+
+.goods-consultation .company-message{
+}
+
+.goods-consultation .company-message a{
+	display: block;
+	color: lightgray;
+	text-decoration: none;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px dashed gray;
+}
+
+.goods-main{
+	width: 1250px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top: 44px;
+}
+
+.goods-main .sidebar{
+	width: 225px;
+	border-top: 1px solid lightgrey;
+	float: left;
+}
+
+.goods-main .sidebar .side-mod1{
+	width: 225px;
+	height: 130px;
+	padding-top: 20px;
+	border-bottom: 1px solid lightgrey;
+}
+.goods-main .sidebar .side-mod1 .side-mod-hd{
+	height: 35px;
+	line-height: 35px;
+}
+
+.goods-main .sidebar .side-mod1 .side-mod-bd .same-list a{
+	text-decoration: none;
+	color: black;
+}
+
+.goods-main .sidebar .side-mod2{
+	padding-top: 20px;
+}
+
+.goods-main .sidebar .side-mod2 .side-mod-bd .side-mod-list li{
+	width: 225px;
+	height: 220px;
+}
+
+.goods-main .sidebar .side-mod2 .side-mod-bd .side-mod-list li a{
+	text-decoration: none;
+	color: darkgrey;
+}
+
+.goods-main .sidebar .side-mod2 .side-mod-bd .side-mod-list li .imgContair{
+	display: block;
+	width: 225px;
+	height: 130px;
+	margin: 30px auto;
+	}
+.goods-main .sidebar .side-mod2 .side-mod-bd .side-mod-list li a img{
+	display: block;
+	margin: 0 auto;
+}
+
+.goods-main .sidebar .side-mod2 .side-mod-bd .side-mod-list li .pro-info .price{
+	color: orangered;
+}
+
+.goods-main .content{
+	width: 945px;
+	float: left;
+}
+
+.goods-main .content .content-hd{
+}
+
+.goods-main .content .content-hd .content-hd-nav{
+	float: left;
+	width: 644px;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	background: #f7f7f7;
+}
+
+
+.goods-main .content .content-hd .bottom-line{
+	float: left;
+	width: 300px;
+	height: 51px;
+	border-bottom: 1px solid #ccc;
+}
+
+.goods-main .content .content-hd ul{
+	position: absolute;
+}
+
+.goods-main .content .content-hd ul li{
+	float: left;
+	width: 160px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	overflow: hidden;
+	margin-right: -1px;
+	border: 1px solid #ccc;
+}
+
+.goods-main .content .content-hd ul li a:link,.goods-main .content .content-hd ul li a:visited{
+	text-decoration: none;
+	color: #000;
+}
+
+.goods-main .content .content-hd ul li a:hover{
+	
+}
+
+.goods-main .content .content-hd ul .status-on{
+	background: #fff;
+    border-bottom-color: #fff;
+}
+
+.goods-main .content .content-hd ul li a{
+	display: block;
+	
+}
